@@ -1,0 +1,84 @@
+﻿@model Produs
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+
+        <link href="~/content/TreiDe.css" rel="stylesheet" />
+    </head>
+
+@*<div class="thumbnail">
+    <img alt="@Model.Nume" src="@Model.UrlPoza" />
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Pret</h3>
+        <h3><a href="#">@Model.Nume</a></h3>
+        <p>@Model.Descriere</p>
+    </div>
+</div>*@
+<div class="container">
+
+    <div class="row">
+
+        @*<div class="col-lg-3">
+            <h1 class="my-4">Shop Name</h1>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Category 1</a>
+                <a href="#" class="list-group-item">Category 2</a>
+                <a href="#" class="list-group-item">Category 3</a>
+            </div>
+        </div>*@
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-12 style="width: 400px!important"">
+
+            <div class="card mt-4">
+                <img class="card-img-top img-fluid" src="@Model.UrlPoza" alt="" >
+                <div class="card-body">
+                    <h3 class="card-title">@Model.Nume</h3>
+                    <h4>@Model.Pret</h4>
+                    <p class="card-text">@Model.Descriere</p>
+                    
+               
+                </div>
+            </div>
+            <!-- /.card -->
+
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    Review-uri Produs
+                </div>
+                <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <a href="#" class="btn btn-success">Leave a Review</a>
+                    <div class="addToCart float-right">
+                        <p class="button">
+                            <a class="btn btn-primary"
+                               asp-controller="ShoppingCart"
+                               asp-action="AdaugaInShoppingCart"
+                               asp-route-produsId="@Model.ProdusId">Adauga in Cos</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+
+</div>
+@*<div class="addToCart">
+    <p class="button">
+        <a class="btn btn-primary"
+           asp-controller="ShoppingCart"
+           asp-action="AdaugaInShoppingCart"
+           asp-route-produsId="@Model.ProdusId">Adauga in Cos</a>
+    </p>
+</div>*@

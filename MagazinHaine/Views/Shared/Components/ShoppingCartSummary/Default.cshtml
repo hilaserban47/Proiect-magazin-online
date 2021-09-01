@@ -1,0 +1,18 @@
+﻿@model ShoppingCartViewModel
+    <head>
+
+
+        <script src="https://kit.fontawesome.com/9e77e9caea.js" crossorigin="anonymous"></script>
+
+    </head>
+    @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
+    {
+        <li>
+            <a asp-controller="ShoppingCart" asp-action="Index">
+                <span class="fas fa-shopping-cart"></span>
+                <span id="cart-status">
+                    @Model.ShoppingCart.ShoppingCartItems.Count
+                </span>
+            </a>
+        </li>
+    }

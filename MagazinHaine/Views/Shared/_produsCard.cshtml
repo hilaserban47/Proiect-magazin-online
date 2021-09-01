@@ -1,0 +1,68 @@
+﻿@model Produs
+        @*<head>
+            <link href="~/content/site.css" rel="stylesheet" />
+        </head>
+        <div class="card" style="height:500px!important">
+            <div class="thumbnail">
+                <img src="@Model.UrlThumbnailPoza" alt="poza pentru magazin haine" style="width:100%"/>
+
+                <div class="card-body">
+                    <h4><a asp-controller="Produs" asp-action="Detalii" asp-route-id="@Model.ProdusId">@Model.Nume</a></h4>
+                    <h3 class="pret">@Model.Pret.ToString("c")</h3>
+                    <p>@Model.Descriere</p><h4> Marime : @Model.Marime</h4>
+
+                    <div class="addToCart">
+                        <p class="button">
+                            <a class="btn btn-primary"
+                               asp-controller="ShoppingCart"
+                               asp-action="AdaugaInShoppingCart"
+                               asp-route-produsId="@Model.ProdusId">
+                                Adauga in Cos
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+<head>
+    <link href="~/content/TreiDe.css" rel="stylesheet" />
+</head>
+<div class="container page-wrapper">
+    <div class="page-inner">
+        <div class="row">
+            <div class="el-wrapper">
+                <div class="box-up">
+                    <img class="img" src="@Model.UrlThumbnailPoza" alt="">
+                    <div class="img-info">
+                        <div class="info-inner">
+                            <span class="p-name"><a asp-controller="Produs" asp-action="Detalii" asp-route-id="@Model.ProdusId">@Model.Nume</a></span>
+                            <span class="p-company">@Model.Descriere</span>
+                        </div>
+                        <div class="a-size">Marimea produsului : <span class="size">@Model.Marime</span></div>
+                    </div>
+                </div>
+
+                <div class="box-down">
+                    <div class="h-bg">
+                        <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                        <span class="price">@Model.Pret <label> Lei</label></span>
+                        @*<span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                        </span>*@
+                        <div class="add-to-cart">
+                                <span class="txt"
+                                   asp-controller="ShoppingCart"
+                                   asp-action="AdaugaInShoppingCart"
+                                   asp-route-produsId="@Model.ProdusId">
+                                    Adauga in Cos
+                                </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

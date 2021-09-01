@@ -1,0 +1,135 @@
+﻿@model ProdusListViewModel
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <title>Sidebar 09</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="~/content/style.css" rel="stylesheet" />
+        <link href="~/content/site.css" rel="stylesheet" />
+    </head>
+        <body>
+            
+            <div class="wrapper d-flex align-items-stretch">
+                <nav id="sidebar">
+                    <div class="custom-menu">
+                        @*<button type="button" id="sidebarCollapse" class="btn btn-primary">
+            </button>*@
+                    </div>
+                    @*<div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+                        <div class="user-logo">
+                            <div class="img img-logo" style="background-image: url(" /img/copil.jpg");"></div>
+                            <br />
+
+                        </div>
+                    </div*@
+                    <h3 class="text-center">Categorii îmbrăcăminte copii</h3>
+                    <ul class="list-unstyled components mb-5">
+                        <li class="active meniustanga" value="1">
+                            <a>Blugi</a>
+                        </li>
+                        <li class="active meniustanga" value="2">
+                            <a>Căciulă</a>
+                        </li>
+                        <li class="active meniustanga" value="3">
+                            <a>Cămașă</a>
+                        </li>
+                        <li class="active meniustanga" value="4">
+                            <a>Chiloți</a>
+                        </li>
+                        <li class="active meniustanga" value="5">
+                            <a>Ciorap</a>
+                        </li>
+                        <li class="active meniustanga" value="7">
+                            <a>Eșarfă</a>
+                        </li>
+                        <li class="active meniustanga" value="8">
+                            <a>Geacă</a>
+                        </li>
+                        <li class="active meniustanga" value="9">
+                            <a>Halat</a>
+                        </li>
+                        <li class="active meniustanga" value="10">
+                            <a>Hanorac</a>
+                        </li>
+                        <li class="active meniustanga" value="11">
+                            <a>Jachetă</a>
+                        </li>
+                        <li class="active meniustanga" value="12">
+                            <a>Pulover</a>
+                        </li>
+                        <li class="active meniustanga" value="13">
+                            <a>Salopetă</a>
+                        </li>
+                        <li class="active meniustanga" value="14">
+                            <a>Trening</a>
+                        </li>
+                        <li class="active meniustanga" value="15">
+                            <a>Tricou</a>
+                        </li>
+                    </ul>
+
+                    @*<li>
+               <a href="@Url.Action"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+        </li>*@
+                    @*<li>
+            <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+        </li>
+                </ul>*@
+
+                </nav>
+
+                <!-- Page Content  -->
+                
+                <div class="row ascunde" style="margin-left: 100px!important;">
+
+                    @*<h2 style="padding: 20px !important;">Tricouri</h2>*@
+                    <br />
+                    @foreach (var produs in Model.Produse@*.Where(c => c.TipProdus == 3)*@)
+{               <div class="row">
+                <div class="col-md-4">
+
+                    @if (produs.TipProdus == 3)
+                  {
+                    <partial name="_produsCard" model="produs" />
+                     }
+            </div>
+        </div>
+               
+
+            }
+                </div>
+                <form id="punecontent">
+                    <div>
+
+                    </div>
+                </form>
+                
+            </div>
+
+            
+           
+            <script src="~/lib/jquery/jquery.js"></script>
+            <script src="~/lib/popper.js"></script>
+            <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+            <script src="~/lib/main.js"></script>
+            @*<script src="~/TreiDeJs/TreiDe.js"></script>*@
+        </body>
+</html>

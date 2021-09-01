@@ -1,0 +1,171 @@
+﻿body {
+    padding-top: 0px !important;
+    background-repeat: repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
+.fa, .fas {
+    padding: 11px;
+    color: white;
+}
+
+/*#register{
+    padding-left : 1300px !important;
+}*/
+#cart-status {
+    color: white;
+}
+.produsafisare {
+    display: flex;
+    flex: 0 0 33.333333%;
+}
+.logo-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+
+/*.carousel-holder {
+    margin-bottom: 30px;
+}*/
+/*.carousel-inner > .item {
+    height: 400px !important;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}*/
+.categoriiculoare{
+    color: white;
+    
+}
+.custom-control-label::before{
+    display: none !important;
+}
+.categoriiculoare:hover {
+    color: white;
+    text-decoration: none;
+}
+.categoriiculoare:after {
+    color: white;
+}
+    .caption {
+        height: 130px;
+        overflow: hidden;
+    }
+
+.caption h4 {
+    white-space: nowrap;
+ }
+
+.thumbnail  img {
+    width: 50%;
+}
+.categoriidropdown{
+    padding: 8px;
+    color: white;
+}
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+ 
+footer {
+    margin: 50px 0;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #fcaeae !important;
+    border-color: #fba1a1 !important;
+}
+
+.btn {
+    background-color: #fcaeae !important;
+    border-color: #fba1a1 !important;
+    margin-right: 5px;
+}
+
+.carusel
+{
+   
+   padding: 0;
+   margin: 0;
+   display: flex;
+}
+
+#produscontent{
+    padding-left: 200px;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav{
+    margin: 0!important;
+    padding: 0!important;
+}
+.continutpagina{
+    padding: 0!important;
+    margin: 0!important;
+    width: 100% !important;
+}
+
+.img-logo{
+    background-image : url('/img/copil-logo.jpg')!important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.pret {
+    color: grey;
+    font-size: 22px;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+    .button:hover {
+        opacity: 0.7;
+    }
+

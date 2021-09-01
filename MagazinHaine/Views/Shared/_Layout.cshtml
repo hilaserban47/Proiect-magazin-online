@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link href="/content/site.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9e77e9caea.js" crossorigin="anonymous"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="row continutpagina">
+    <div class="col-md-12">
+    <nav class="navbar navbar-expand-sm bg-warning" role="navigation">
+        <a class="navbar-brand" href="#">
+            @*<div class="logo-image">
+                <img class="img-fluid" src="/img/index.jpg" />
+            </div>*@
+        </a>
+        <ul class="navbar-nav continutnav">
+            <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Pagina principala</a></li>
+            @*@await Component.InvokeAsync("CategorieMeniu")*@
+            <li class="nav-item"><a class="nav-link" href="@Url.Action("ListaBarbati" , "Produs")">Barbati</a></li>
+            <li class="nav-item"><a class="nav-link" href="@Url.Action("ListaFemei" , "Produs")">Femei</a></li>
+            <li class="nav-item"><a class="nav-link" href="@Url.Action("ListaCopii" , "Produs")">Copii</a></li>
+            <li class="nav-item"><a class="nav-link" href="@Url.Action("ListaAccesori" , "Produs")">Accesorii</a></li>
+            @*<li class="nav-item"><a class="nav-link" href="@Url.Action("TreiDeAnimation" , "Produs")">Accesorii</a></li>*@
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index" , "Contact")">Contact</a>
+                @await Component.InvokeAsync("ShoppingCartSummary")
+
+        </ul>
+        @*<form asp-action="Index" method="get">
+            <div class="nav-item">
+                <p>
+                    Cauta Produs : <input type="text" name="cautaString" value="" />
+                    <input type="submit" value="Cauta" />
+                    <a asp-action="Index">Sterge Cautarea</a>
+                </p>
+            </div>
+        </form>*@
+
+        <ul class="navbar-nav ml-auto"><partial name="_LoginPartial" /></ul>
+    </nav>
+
+    
+        @*<div class="col-md-3">
+                <p class="lead"><img class="img-responsive" src="/img/index.jpg" /></p>
+            </div>*@
+        
+            @RenderBody()
+        
+    </div>
+   </div>
+    @RenderSection("Scripts", required: false);
+
+</body>
+</html>

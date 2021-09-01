@@ -1,0 +1,45 @@
+﻿@model ProdusListViewModel
+
+
+
+
+    @*<h1>@Model.CategorieCurenta</h1>
+    @foreach (var produs in Model.Produse)
+    {
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="@produs.UrlThumbnailPoza" alt="poza pentru magazin haine" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" class="item"/>
+
+                <div class="caption">
+                    <h3 class="pull-right">@produs.Pret.ToString("c")</h3>
+                    <h3>@produs.Nume</h3>
+                    <p>@produs.Descriere</p>
+                </div>
+            </div>
+        </div>
+    }*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>@Model.Categorii</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            
+            @foreach (var produs in Model.Produse)
+            {
+                <partial name="_produsCard" model="produs" />
+
+            }
+        </div>
+    </div>
+    </body>
+</html>
